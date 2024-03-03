@@ -6,7 +6,15 @@ function deObjetoAarray(objeto) {
   // Estos elementos debe ser cada par clave:valor del objeto recibido.
   // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
   // Tu código:
-}
+  let arrAux = []  //Areglo auxiliar para guardar las duplas clave y valor
+  let arrSalida = [] //Areglo de salida que va acumulando los arreglos dupla
+  //bucle que recorre el objeto en busca de las duplas
+  for (let propiedad in objeto) {
+      arrAux[0] = propiedad
+      arrAux[1] = objeto[propiedad]
+      arrSalida.push(arrAux)
+    }
+  }
 
 function numberOfCharacters(string) {
   // La función recibe un string. Debes recorrerlo y retornar un objeto donde cada propiedad es una de las
